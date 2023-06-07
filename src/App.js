@@ -3,6 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Login from './Login';
 
 
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
@@ -26,6 +27,9 @@ function App() {
           Login
           </Button>
         </Toolbar>
+        <Routes>
+          <Route path="/login" element={<Login setToken={setToken} />} />
+        </Routes>
       </ThemeProvider>
     </Router>
   );
